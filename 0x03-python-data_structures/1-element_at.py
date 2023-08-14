@@ -7,4 +7,3 @@ def element_at(my_list, idx):
     """
     print an number of idx
     """
-

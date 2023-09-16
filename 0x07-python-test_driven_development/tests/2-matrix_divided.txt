@@ -1,0 +1,85 @@
+the ``2-matrix_divided.txt`` module
+======================
+
+Using``matrix_divided``
+
+-------------------
+ >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+========================
+
+ >>> matrix = [[7, 8], [9, 10]]
+ >>> matrix_divided(matrix, "alx")
+ Traceback (most recent call last):
+ TypeError: div must be a number
+
+========================
+
+ >>> matrix =[[7, 8], [9, 'L']]
+ >>> matrix_divided(matrix, 3)
+ Traceback (most recent call last):
+ TypeError: matrix must be a matrix (list of lists) of integers/floats
+ 
+========================
+
+ >>> matrix = [[7, 8], [9, 10]]
+ >>> matrix_divided(matrix, 0)
+ Traceback (most recent call last):
+ ZeroDivisionError: division by zero
+
+========================
+
+ >>> matrix = []
+ >>> matrix_divided(matrix, 3)
+ Traceback (most recent call last):
+ TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+========================
+
+ >>> matrix = 'alx'
+ >>> matrix_divided(matrix, 3)
+ Traceback (most recent call last):
+ TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+========================
+
+ >>> matrix = [7, 8]
+ >>> matrix_divided(matrix, 2)
+ Traceback (most recent call last):
+ TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+========================
+
+ >>> matrix = [[7, 8], [9, 10]]
+ >>> matrix_divided(matrix, 2)
+ [[3.5, 4.0], [4.5, 5.0]]
+
+========================
+
+ >>> matrix = [[7, 8], [9.9, 10.6]]
+ >>> matrix_divided(matrix, 2)
+ [[3.5, 4.0], [4.95, 5.3]]
+
+========================
+
+ >>> matrix = [[-7, -8], [9, 10]]
+ >>> matrix_divided(matrix, 2)
+ [[-3.5, -4.0], [4.5, 5.0]]
+
+========================
+
+ >>> matrix = [[7, 8], [9, 10]]
+ >>> matrix_divided(matrix, -2)
+ [[-3.5, -4.0], [-4.5, -5.0]]
+
+========================
+
+ >>> matrix = [[7, 8], [9, 10]]
+ >>> matrix_divided(matrix, 2.2)
+ [[3.18, 3.64], [4.09, 4.55]]
+
+========================
+
+ >>> matrix = [[]]
+ >>> matrix_divided(matrix, 3)
+ [[]]

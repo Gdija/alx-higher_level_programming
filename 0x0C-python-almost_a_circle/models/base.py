@@ -54,6 +54,7 @@ class Base():
     @classmethod
     def load_from_file(cls):
         """Task 19"""
+
         filename = str(cls.__name__) + ".json"
         try:
             with open(filename, "r") as jsonfile:

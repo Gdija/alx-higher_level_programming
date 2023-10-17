@@ -1,2 +1,2 @@
-# lists databases
+-- lists all databases
 SHOW DATABASES;

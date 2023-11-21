@@ -12,6 +12,4 @@ if __name__ == "__main__":
                          db=argv[3],)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states")
-    for item in cursor.fetchall():
-        if state[1] == argv[4]:
-            print(item)
+    [print(item) for item in cursor.fetchall() if item[1] == argv[4]]

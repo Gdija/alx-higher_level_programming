@@ -14,6 +14,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    cis = session.query(State, City).filter(State.id == City.state_id).order_by(City.id)
+    cis = session.query(State, City).\
+        filter(State.id == City.state_id).order_by(City.id)
     for state, city in cis:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
